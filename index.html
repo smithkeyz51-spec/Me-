@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Esther ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ff6a88, #ff99ac, #ffc3a0);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 520px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      color: #ff4d6d;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ffe0e6;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Esther ❤️</h1>
+
+    <p>
+      My baby, I just wan remind you small…
+      life fit dey do somehow sometimes, but you no be anybody mate abeg 😌
+    </p>
+
+    <p>
+      You too strong… like that kind person wey NEPA go take light,
+      but you still dey shine on your own 😂✨
+    </p>
+
+    <p>
+      if (problem > Esther) { <br>
+      &nbsp;&nbsp;return "Lie! Who born am?" 😂 <br>
+      }
+    </p>
+
+    <p>
+      No wahala wey fit bring you down.
+      You go bend am, break am, or just laugh am pass 😄
+    </p>
+
+    <p>
+      And if stress try you ehn…
+      just remember say you get one lovely boy wey go hype you die ❤️😂
+    </p>
+
+    <p>
+      I love you die. Nobody reach ❤️
+    </p>
+
+    <button onclick="showLove()">Press this make you smile 😏</button>
+  </div>
+
+  <script>
+    function showLove() {
+      alert("Esther no dey lose. Na life dey learn work ❤️😂");
+    }
+
+    // Create floating hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
